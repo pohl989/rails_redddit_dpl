@@ -1,0 +1,9 @@
+<h1>Click a Topic to View Contact</h1>
+
+<%= link_to "Create a New Topic", new_sub_topic_path(@sub) %>
+
+<ul>
+  <% @topics.each do |topic| %>
+  <li><%= link_to topic.name, sub_topic_path(@sub, topic) %></li>
+<%end%>
+</ul>
